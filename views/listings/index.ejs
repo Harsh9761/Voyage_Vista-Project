@@ -1,0 +1,83 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <div id="filters">
+        <div class="filter">
+            <i class="fa-solid fa-fire"></i>
+            <p><a href="/filter/trending">Trending</a></p>
+        </div>
+        <div class="filter">
+            <i class="fa-solid fa-bed"></i>
+            <p><a href="/filter/Rooms">Rooms</a></p>
+        </div>
+        <div class="filter">
+            <i class="fa-solid fa-city"></i>
+            <p><a href="/filter/Cities">Cities</a></p>
+        </div>
+        <div class="filter">
+            <i class="fa-solid fa-mountain"></i>
+            <p><a href="/filter/Mountains">Mountains</a></p>
+        </div>
+        <div class="filter">
+            <i class="fa-solid fa-snowflake"></i>
+            <p><a href="/filter/Snow">Snow</a></p>
+        </div>
+        <div class="filter">
+            <i class="fa-brands fa-fort-awesome"></i>
+            <p><a href="/filter/Mansion">Mansion</a></p>
+        </div>
+        <div class="filter">
+            <i class="fa-solid fa-water-ladder"></i>
+            <p><a href="/filter/Amazing pools">Amazing pools</a></p>
+        </div>
+        <div class="filter">
+            <i class="fa-solid fa-tractor"></i>
+            <p><a href="/filter/Farms">Farms</a></p>
+        </div>
+        <div class="filter">
+            <i class="fa-solid fa-campground"></i>
+            <p><a href="/filter/Camping">Camping</a></p>
+        </div>
+
+
+        <div>
+            <div class="dropdown mt-4">
+                <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sort-by-Price
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#" onclick="sortListings('asc')">Low-to-High</a></li>
+                  <li><a class="dropdown-item" href="#" onclick="sortListings('desc')">High-to-Low</a></li>
+                </ul>
+              </div>
+        </div>
+
+        <div class="taxSwitch mt-4 ms-4">
+            <div class="form-check form-switch form-check-reverse">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Include Taxes</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1" id="listings-container">
+        <% for(let listing of allListings) { %>
+            <a href="/listings/<%= listing._id %>">
+                <div class="card col listing-card">
+                    <img src="<%= listing.image %>" style="height: 20rem;" class="card-img-top" alt="img">
+                    <div class="card-img-overlay"></div>
+                    <div class="card-body">
+                      <p class="card-text">
+                         &nbsp<b><%= listing.title %></b> <br>
+                         <p class="card-price" data-original-price="<%= listing.price %>">&nbsp; &#8377 <%= listing.price.toLocaleString("en-IN") %> / night
+                         <i class="tax"> &nbsp;&nbsp; +18% GST</i>
+                        </p>
+                      
+
+                      </p>
+                    </div>
+                </div>
+            </a>
+        <% } %>
+    </div>
+</body>
+

@@ -1,0 +1,27 @@
+<% layout("/layouts/boilerplate") -%>
+<body class="loginbody">
+    <div class="rows loginbox">
+        <div class="col-md-6 logininnerbox">
+            <br>
+            <h5>Log in:</h5>
+            <hr><br>
+            <h4>Welcome to Voyage_Vista</h4>
+            <form action="/login" method="post" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Usename:</label>
+                    <input name="username" id="username" type="text" placeholder="Enter Username" class="form-control" required>
+                    <div class="valid-feedback">Username looks good!</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input name="password" id="password" type="password" placeholder="Enter Password" class="form-control" required>
+                </div>
+                <p class="loginp">We’ll call or text you to confirm your number. Standard message and data rates apply.</p>
+                <button class="btn btn-danger">Log In</button>
+                <br><br>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

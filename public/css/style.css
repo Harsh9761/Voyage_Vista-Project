@@ -1,0 +1,252 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+.navbar{
+    height: 5rem;
+}
+
+.fa-globe{
+    color: red;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: black !important;
+}
+
+
+/* Footer */
+.f-info{
+    background-color: #ebebeb;
+    height: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links,.f-info-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-icons i{
+    margin-right: 1rem;
+    font-size: 1.3rem;
+}
+
+
+/* Listings */
+.listing-card1{
+    border: none !important;
+    margin-bottom: 2rem;
+    border-radius: 1rem !important;
+    
+    
+}
+
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+    border-radius: 1rem !important;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    
+}
+
+.listing-card:hover {
+    box-shadow: 0px 10px 9px -4px rgba(0, 0, 0,0.1);
+    transform: scale(1.05, 1.05);
+}
+
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100%;
+}
+
+.row a{
+    text-decoration: none;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+.card-text p{
+    font-weight: 400 !important;
+}
+
+/* .card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+    
+} */
+
+/* Show Page*/
+.show-img{
+    height: 55vh;
+}
+
+.show-btns {
+    display: flex;
+    justify-content: left;
+    gap: 20px; 
+    align-items: center;
+}
+
+.show-delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* Login Page */
+.loginbox{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 1rem;
+   
+    color: #fff;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    padding: 10px 10px;
+    
+    
+}
+
+.loginp{
+    display: flex;
+    font-size: 0.75rem !important;
+}
+
+.loginbody{
+    background-image: url("https://media.istockphoto.com/id/155439315/photo/passenger-airplane-flying-above-clouds-during-sunset.webp?a=1&b=1&s=612x612&w=0&k=20&c=PYs9JKctmfYj5VNwSQp5QcxHmaPsEGuYEIMT_rFM3ow=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.logininnerbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* contact Us */
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    
+}
+
+.contact-item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    width: 70%;
+}
+
+.contact-item:hover{
+    box-shadow: 0px 10px 9px -4px rgba(0, 0, 0,0);
+    transform: scale(1.05, 1.05);
+    border: none;
+}
+
+/* Review card */
+.review-card {
+    
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+.review-card:hover {
+    box-shadow: 0px 10px 9px -4px rgba(0, 0, 0,0.4);
+    transform: scale(1.05, 1.05);
+    border: none;
+}
+
+/* Filters */
+#filters{
+    display: flex;
+    flex-wrap: wrap;
+}
+.filter{
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-right: 2.5rem;
+    opacity: 0.7;
+}
+.filter:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* navbar search */
+.search-btn{
+    border-radius: 25px !important;
+    padding: 7px 20px !important;
+}
+.search-btn i{
+    display: inline;
+}
+.search-inp{
+    border-radius: 25px !important;
+}
+
+/* filter */
+.filter p a{
+    text-decoration: none;
+    color: #222222;
+}
+
+/* tax button */
+.tax{
+    display: none;
+}
+.taxSwitch{
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 3rem;
+    padding: .6rem;
+}
+
+/* maps */
+#map{
+    height: 450px;
+    width: 65vw;
+}
